@@ -1,0 +1,16 @@
+MODEL:
+  NUM_CLASSES: 21
+INPUT:
+  IMAGE_SIZE: 300
+DATASETS:
+  TRAIN: ("voc_2007_trainval", "voc_2012_trainval")
+  TEST: ("clipart1k_test", )
+SOLVER:
+  MAX_ITER: 120000
+  LR_STEPS: [80000, 100000]
+  GAMMA: 0.1
+  BATCH_SIZE: 8
+  BACKBONELR: 1e-3
+  BOXHEADLR: 1e-3
+
+OUTPUT_DIR: 'outputs/vgg_ssd300_voc0712_baseline'

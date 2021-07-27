@@ -1,0 +1,16 @@
+MODEL:
+  NUM_CLASSES: 21
+INPUT:
+  IMAGE_SIZE: 300
+DATASETS:
+  TRAIN: ("voc_2007_trainval", "voc_2012_trainval")
+  TARGET: ("clipart1k_train",)
+  TEST: ("clipart1k_test", )
+SOLVER:
+  MAX_ITER: 400
+  BATCH_SIZE: 16
+  BACKBONELR: 1e-5
+  BOXHEADLR: 1e-5
+  DOMAINDISCRIMINATORLR: 1e-5
+  LAMBDA: 0.6
+OUTPUT_DIR: 'outputs/vgg_ssd300_voc0712_feature_alignment_domain_lambda0.6'
